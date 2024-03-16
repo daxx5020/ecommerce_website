@@ -5,3 +5,4 @@ composer require filament/forms:"^3.2" -W
 php artisan filament:install --scaffold --forms
 npm install
 npm run dev
+php artisan make:filament-resource Customer --generate
