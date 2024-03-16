@@ -1,0 +1,7 @@
+composer require filament/filament:"^3.2" -W
+php artisan filament:install --panels
+php artisan make:filament-user
+composer require filament/forms:"^3.2" -W
+php artisan filament:install --scaffold --forms
+npm install
+npm run dev
