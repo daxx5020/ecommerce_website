@@ -14,8 +14,6 @@ use App\http\controllers\DemoController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home',[DemoController::class,'index']);
+Route::get('/',[DemoController::class,'index']);
+

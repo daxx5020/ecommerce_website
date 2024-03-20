@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\heroPageSection;
 
 class DemoController extends Controller
 {
     Public function index(){
-        return view('home');
+    $data = heroPageSection::all();
+    return view('users.home',compact('data'));
     }
 }
