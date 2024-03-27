@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,7 @@ use App\Http\Controllers\DemoController;
 */
 
 
-Route::get('/',[DemoController::class,'index']);
+Route::get('/',[DemoController::class,'index'])->name("Home");
+
+Route::get('/product',[ProductController::class,'index'])->name("Product");
 

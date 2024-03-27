@@ -11,15 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
+
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->decimal('discounted_price', 8, 2);
+            $table->decimal('main_price', 8, 2);
             $table->unsignedBigInteger('category_id');
-            $table->text('description')->nullable();
-            $table->decimal('price', 10, 2);
+            $table->string('SKU');
+            $table->integer('reviews');
+            $table->text('short_description');
+            $table->string('size')->nullable();
+            $table->text('description');
             $table->string('image')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
