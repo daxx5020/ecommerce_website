@@ -21,15 +21,17 @@
                                     <div class="card-body">
                                         <div class="shop__sidebar__categories">
                                             <ul class="nice-scroll">
-                                                <li><a href="#">Men (20)</a></li>
-                                                <li><a href="#">Women (20)</a></li>
+                                                @foreach($data['categories'] as $category)
+                                                <li><a href="#">{{$category->name}}</a></li>
+                                                @endforeach
+                                                {{-- <li><a href="#">Women (20)</a></li>
                                                 <li><a href="#">Bags (20)</a></li>
                                                 <li><a href="#">Clothing (20)</a></li>
                                                 <li><a href="#">Shoes (20)</a></li>
                                                 <li><a href="#">Accessories (20)</a></li>
                                                 <li><a href="#">Kids (20)</a></li>
                                                 <li><a href="#">Kids (20)</a></li>
-                                                <li><a href="#">Kids (20)</a></li>
+                                                <li><a href="#">Kids (20)</a></li> --}}
                                             </ul>
                                         </div>
                                     </div>
@@ -166,6 +168,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-9">
                 <div class="shop__product__option">
                     <div class="row">
@@ -186,10 +189,12 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="row">
+                @foreach($data['products'] as $product)
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="storage/{{$product->image}}">
                                 <ul class="product__hover">
                                     <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                     <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a>
@@ -198,7 +203,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6>Piqué Biker Jacket</h6>
+                                <h6>{{$product->name}}</h6>
                                 <a href="#" class="add-cart">+ Add To Cart</a>
                                 <div class="rating">
                                     <i class="fa fa-star-o"></i>
@@ -207,7 +212,7 @@
                                     <i class="fa fa-star-o"></i>
                                     <i class="fa fa-star-o"></i>
                                 </div>
-                                <h5>$67.24</h5>
+                                <h5>{{$product->main_price}}</h5>
                                 <div class="product__color__select">
                                     <label for="pc-4">
                                         <input type="radio" id="pc-4">
@@ -222,7 +227,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    @endforeach
+                    {{-- <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="product__item sale">
                             <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
                                 <span class="label">Sale</span>
@@ -610,7 +616,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row">
                     <div class="col-lg-12">

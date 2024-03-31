@@ -24,6 +24,8 @@ return new class extends Migration
             $table->string('size')->nullable();
             $table->text('description');
             $table->string('image')->nullable();
+            $table->timestamps();
+
         });
     }
 
