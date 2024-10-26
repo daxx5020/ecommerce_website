@@ -8,7 +8,11 @@ use App\Models\HeroPageSection;
 class DemoController extends Controller
 {
     Public function index(){
-    $data = heroPageSection::all();
-    return view('users.home',compact('data'));
+        $data = heroPageSection::all();
+        return view('users.home',compact('data'));
+    }
+
+    public function test(){
+        return view('users.test');
     }
 }

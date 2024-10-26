@@ -18,5 +18,7 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/',[DemoController::class,'index'])->name("Home");
 
+Route::get('/test',[DemoController::class,'test'])->name("test");
+
 Route::get('/product',[ProductController::class,'index'])->name("Product");
 
