@@ -84,9 +84,9 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('reviews')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('size')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                // Tables\Columns\TextColumn::make('size')
+                //     ->searchable(),
+                // Tables\Columns\ImageColumn::make('image'),
             ])
             ->filters([
                 //

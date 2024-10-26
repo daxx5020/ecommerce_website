@@ -14,4 +14,6 @@ class ProductController extends Controller
         $data['categories'] = Category::all();
         return view('users.product',compact('data'));
     }
+
+    
 }
